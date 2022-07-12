@@ -18,9 +18,10 @@ let package = Package(
         ),
         .target(
             name: "AstraController",
-            dependencies: ["Model"]
+            dependencies: ["Model", "Env"]
         ),
-        .target(name: "Model")
+        .target(name: "Model"),
+        .target(name: "Env")
         //.executableTarget(
           //  name: "Astra-Swift-Workshop",
             //dependencies: []),

@@ -4,7 +4,7 @@ import Model
 import Foundation
 
 let tool = AstraController()
-
+print("Hello World!")
 //tool.printAllOrdersFor(userName:"Andy1")
 //tool.createAccount(userName:"Angela1", password:"cats")
 //tool.deleteAccount(userName:"Angela1", password:"cats")
