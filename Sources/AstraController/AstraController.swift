@@ -1,4 +1,7 @@
 import Foundation
+#if canImport(FoundationNetworking)
+    import FoundationNetworking
+#endif
 import Model
 import Env
 
@@ -406,7 +409,7 @@ private func getAllOrdersForUserName(userName:String)->(orders: [Order], localOr
 
 //orderOrUserInfo is true to perform order get request
 //and false to perform user info get request
-private func getRequest(orderOrUserInfo:DarwinBoolean, str:String){
+private func getRequest(orderOrUserInfo:Bool, str:String){
     let request = httpRequest(httpMethod: "GET", endUrl: str)
     let task = URLSession.shared.dataTask(with: request){ data, response, error in
         if let _ = error {
